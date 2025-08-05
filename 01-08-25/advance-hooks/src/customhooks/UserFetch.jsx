@@ -8,7 +8,7 @@ export function useFetch(url) {
   useEffect(() => {
     let ignore = false;
 
-    async function fetchData() {
+    async function fetchData(){
       setLoading(true);
       try {
         const response = await fetch(url);
