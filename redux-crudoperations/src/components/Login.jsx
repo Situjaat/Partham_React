@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useDispatch } from "react-redux";
-import { loginUser } from "../redux/Actions/authActions";
+import { loginUser } from "../redux/Actions/authAction";
 
 const Login = () => {
   const [formData, setFormData] = useState({

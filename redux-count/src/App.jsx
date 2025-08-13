@@ -1,4 +1,7 @@
+import { BrowserRouter ,Routes, Route} from "react-router-dom"
+import Login from "./components/Login"
 import Home from "./pages/Home"
+import Dashboard from "./components/Dashboard"
 
 
 function App() {
@@ -6,8 +9,13 @@ function App() {
 
   return (
     <>
-    <Home/>
-       
+   
+   <BrowserRouter>
+   <Routes>
+    <Route path ="/" element={<Login/>} />
+    <Route path = "/dashboard" element = {<Home/>}/>
+   </Routes>
+   </BrowserRouter>
     </>
   )
 }

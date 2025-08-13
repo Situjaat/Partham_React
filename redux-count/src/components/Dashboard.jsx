@@ -1,25 +1,12 @@
-import { useDispatch } from "react-redux";
-import {increment, decrement, reset} from "../redux/actions";
+import { useSelector } from "react-redux";
 
 const Dashboard = () => {
-  const dispatch = useDispatch();
-  const handleIncrease = () => {
-    dispatch(increment());
-  };
-
-  const handleDecrease = () => {
-    dispatch(decrement());
-  };
-  const handleReset = () => {
-    dispatch(reset())
-  }
-  return (
-    <div>
-      <button onClick={handleIncrease}> Increment</button>
-      <button onClick={handleDecrease}>Decrease</button>
-      <button onClick={handleReset}> Reset</button>
-    </div>
-  );
+  const user = useSelector ((state) => state.auth.user) 
+return (
+  <div>
+   <h4> welCome on My Page mr <h1>{user?.name} </h1> </h4> 
+  </div>
+)
 };
 
 export default Dashboard;
