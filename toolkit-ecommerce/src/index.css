@@ -1,0 +1,13 @@
+.demo-logo {
+  font-size: 24px;
+  color: #fff;
+}
+.demo-logo span {
+  font-size: 16px;
+}
+.banner {
+  text-align: center;
+  background: #353b65;
+  padding: 50px 100px;
+  color: #fff;
+}
